@@ -1,6 +1,7 @@
+// TTS.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
-import './tts.css';
+import './tts.css'; // Asegúrate de que este archivo exista
 
 const TTS = () => {
   const [texto, setTexto] = useState('');
@@ -17,11 +18,9 @@ const TTS = () => {
     }
     setCargando(true);
 
-    const endpoint = 'https://eastus.tts.speech.microsoft.com/cognitiveservices/v1'; 
-    const apiKey = process.env.REACT_APP_API_KEY;
-    
-    console.log('API Key:', apiKey);
-    
+    const apiKey = 'eca3c64c7b1b4b95bdf6193cf0782a41';
+    const endpoint = 'https://eastus.api.cognitive.microsoft.com/';
+
     const config = {
       headers: {
         'Ocp-Apim-Subscription-Key': apiKey,
@@ -40,21 +39,14 @@ const TTS = () => {
     `;
 
     try {
-      console.log('Inicio de la solicitud');
       const respuesta = await axios.post(endpoint, ssml, config);
-      console.log('Fin de la solicitud', respuesta);
-
-      // Crear una URL del archivo de audio recibido
       const urlAudio = URL.createObjectURL(new Blob([respuesta.data]));
-
-      // Crear un enlace para descargar el audio
       const link = document.createElement('a');
       link.href = urlAudio;
       link.setAttribute('download', 'audio.mp3');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-
       alert('¡Audio descargado con éxito!');
     } catch (error) {
       console.error('Error al convertir texto a audio:', error);
