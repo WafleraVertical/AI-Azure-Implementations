@@ -19,7 +19,7 @@ const TTS = () => {
     setCargando(true);
 
     const endpoint = 'https://eastus.api.cognitive.microsoft.com/'; // Reemplaza <TU_REGION>
-    const apiKey = process.env.REACT_APP_API_KEY; // Usar la API key desde las variables de entorno
+    const apiKey = process.env.REACT_APP_API_KEY; // Asegúrate de que esta línea sea correcta
 
     const config = {
       headers: {
@@ -39,7 +39,9 @@ const TTS = () => {
     `;
 
     try {
+      console.log('Inicio de la solicitud'); // Log antes de la solicitud
       const respuesta = await axios.post(endpoint, ssml, config);
+      console.log('Fin de la solicitud', respuesta); // Log después de la solicitud
 
       // Crear una URL del archivo de audio recibido
       const urlAudio = URL.createObjectURL(new Blob([respuesta.data]));
@@ -55,7 +57,7 @@ const TTS = () => {
       alert('¡Audio descargado con éxito!');
     } catch (error) {
       console.error('Error al convertir texto a audio:', error);
-      alert('Hubo un error al generar el audio.');
+      alert(`Hubo un error al generar el audio: ${error.message}`); // Mostrar el mensaje de error
     } finally {
       setCargando(false);
     }
