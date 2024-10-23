@@ -1,9 +1,8 @@
 import React from 'react';
-import './HotDog.css'; // Ajusta la ruta según la estructura de tus carpetas
+import './HotDog.css';  // Asegúrate de que esta ruta es correcta
 
 function HotDogDetector() {
   const handleImageUpload = (event) => {
-    // Aquí puedes manejar la imagen subida
     console.log(event.target.files[0]);
   };
 

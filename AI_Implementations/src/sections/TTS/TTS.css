@@ -1,0 +1,42 @@
+.text-to-speech {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    color: #007FFF;
+    margin-bottom: 20px;
+  }
+  
+  .text-area {
+    width: 80%;
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .convert-button {
+    background-color: #007FFF;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .convert-button:hover {
+    background-color: #005BB5;
+  }
+  

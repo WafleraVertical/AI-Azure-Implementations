@@ -1,5 +1,5 @@
 import React from 'react';
-import './TTS.css'; // Ajusta la ruta según la estructura de tus carpetas
+import './TTS.css';
 
 function TextToSpeech() {
   return (
