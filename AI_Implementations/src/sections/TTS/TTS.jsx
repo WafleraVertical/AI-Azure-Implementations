@@ -14,8 +14,8 @@ function TextToSpeech() {
   
 
   const speechConfig = speechsdk.SpeechConfig.fromSubscription(
-    import.meta.env.VITE_API_KEY,
-    import.meta.env.VITE_REGION
+    import.meta.env.VITE_AZURE_TTS_API_KEY,
+    import.meta.env.VITE_AZURE_TTS_REGION
   );
   
 
