@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "carousel": "^0.0.3",
+    "microsoft-cognitiveservices-speech-sdk": "^1.41.0",
     "postcss-import": "^16.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
