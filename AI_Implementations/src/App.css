@@ -9,39 +9,42 @@ body {
 }
 
 .navbar {
-  width: 80%;
-  background-color: #f2f2f2; /* Fondo claro */
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f2f2f2;
   padding: 10px;
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin: 20px 0;
 }
 
 .navbar a {
-  color: #007FFF; /* Azul Azure */
+  color: #007FFF;
   text-decoration: none;
   font-size: 1.2em;
 }
 
 .homepage {
+  width: 100%; /* Asegura que ocupe el 100% del ancho */
+  max-width: 1200px;
   text-align: center;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-h1 {
+.header h1 {
   font-size: 2.5em;
-  color: #007FFF; /* Azul Azure */
+  color: #007FFF;
   margin-bottom: 40px;
 }
 
 .homepage-image {
   margin-top: 20px;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
